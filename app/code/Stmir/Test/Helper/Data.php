@@ -28,16 +28,8 @@ class Data extends AbstractHelper
 
     public function getSerializedData($data)
     {
-        echo 'test';
-
-        $arr = [
-            'key' => 'value'
-        ];
-
-        foreach ($arr as $key => $value) {
-            if ($key === $key) {
-                echo $value;
-            }
+        if ($data['test'] === 'test') {
+            $data['skip'] = true;
         }
 
         return $this->serializer->serialize($data);
